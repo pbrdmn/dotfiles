@@ -1,1 +1,27 @@
-/Users/philip/.gitconfig
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[alias]
+  a = add -p
+  co = checkout
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  last = log -1 HEAD
+  ll = log --stat --abbrev-commit
+  b = branch -a
+  m = checkout master
+  s = status
+  unstage = reset HEAD --
+  who = blame
+[color]
+  ui = auto # covers diff = true, status = auto, branch = auto
+  interactive = auto
+[diff]
+  tool = default-difftool
+[difftool "default-difftool"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+[user]
+  name = Philip Boardman
+  email = dustykeyboard@brd.mn
+[rerere]
+  enabled = true
