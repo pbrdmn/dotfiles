@@ -111,7 +111,7 @@ eval "$(hub alias -s)"
 # /Enable Github's hub extension of git
 
 # AirService Servers
-. ~/AirService/airservice-host-aliases
+. ~/AirService/airservice-hosts-aliases
 # /AirService Servers
 
 export PATH="/usr/local/opt/node@6/bin:$PATH"
