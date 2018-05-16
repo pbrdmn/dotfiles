@@ -5,6 +5,7 @@
 [alias]
   a = add -p
   co = checkout
+  cb = checkout -b
   l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
   last = log -1 HEAD
   ll = log --stat --abbrev-commit
@@ -21,7 +22,9 @@
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [user]
-  name = Philip Boardman
-  email = dustykeyboard@brd.mn
+	name = Philip Boardman
+	email = dustykeyboard@brd.mn
 [rerere]
   enabled = true
+[core]
+  excludesfile = ~/.gitignore
