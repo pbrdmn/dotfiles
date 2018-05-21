@@ -15,44 +15,83 @@ set ignorecase
 set smartcase
 set backspace=indent,eol,start
 set autoindent
-set ruler
-set laststatus=2
 set confirm
 set visualbell
 set mouse=a
 set cmdheight=2
-" set number
+
+set splitbelow
+set splitright
 
 set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+" Statusline
+set ruler
+set laststatus=2
+
+" Clear highlight on ESC
+nnoremap <esc> :noh<return><esc>
+
+" Autoread - update buffers when files have changed
+" set autoread
+" autocmd FocusGained * checktime
+
 
 " Buffer Settings and Shortcuts
 " http://flaviusim.com/blog/resizing-vim-window-splits-like-a-boss/
-set winheight=30
-set winminheight=5
+set winheight=10
+set winminheight=3
 nnoremap <silent> + :exe "resize " . (winheigt(0) * 3/2)<CR>
 nnoremap <silent> - :exe "resize " . (winheigt(0) * 2/3)<CR>
-
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
 
 nnoremap <leader>l :ls<CR>:b<space>
 
 " Finding files
 " https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins
-set path=.,**
+set path+=**
+set wildignore+=**/node_modules/**
 nnoremap <leader>f :find *
 nnoremap <leader>s :sfind *
 nnoremap <leader>F :find <C-R>=expand('%:h').'/*'<CR>
 nnoremap <leader>S :sfind <C-R>=expand('%:h').'/*'<CR>
 
+" File Browsing
+" let g:netrw_banner=0
+let g:netrw_liststyle=3 " tree view
 
-" Recommended plugins
+" Modifying files
+nnoremap <leader>rm :call delete(@%) \| bd!<CR>
+
+" Quick terminal
+nnoremap <C-d> :!zsh<CR>
+
+" Git
+nnoremap <leader>gs :!clear && git s<CR>
+nnoremap <leader>gl :!clear && git l<CR>
+
+" Backup files path
+set backupdir=~/.vim/tmp//
+set directory=~/.vim/tmp//
+
+
+" Plugins
+" Install with :PlugUpdate
+nnoremap <leader>rp :PlugUpdate
+call plug#begin('~/.vim/plugged')
 " vim-plug @ https://github.com/junegunn/vim-plug
+
+" vim-prettier @ https://github.com/prettier/vim-prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
 " Ctrl-P @ https://github.com/ctrlpvim/ctrlp.vim
 " AG for Vim @ https://github.com/rking/ag.vim
 " fugitive @ https://github.com/tpope/vim-fugitive
+call plug#end()
+
+" Prettier Config
+let g:prettier#config#semi = 'false'
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#trailing_comma = 'all'
