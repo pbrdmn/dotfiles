@@ -9,6 +9,7 @@
   l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
   last = log -1 HEAD
   ll = log --stat --abbrev-commit
+  pr = pull-request
   b = branch -a
   m = checkout master
   s = status
