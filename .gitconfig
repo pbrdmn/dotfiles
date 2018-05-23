@@ -23,8 +23,8 @@
 [difftool "default-difftool"]
   cmd = code --wait --diff $LOCAL $REMOTE
 [user]
-	name = Philip Boardman
-	email = dustykeyboard@brd.mn
+  name = Philip Boardman
+  email = dustykeyboard@brd.mn
 [rerere]
   enabled = true
 [core]
