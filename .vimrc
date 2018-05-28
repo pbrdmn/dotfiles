@@ -18,6 +18,7 @@ set autoindent
 set confirm
 set visualbell
 set mouse=a
+set ttymouse=xterm2
 set cmdheight=2
 
 set splitbelow
