@@ -69,7 +69,7 @@ let g:netrw_liststyle=3 " tree view
 nnoremap <leader>rm :call delete(@%) \| bd!<CR>
 
 " Quick terminal
-nnoremap <C-d> :!zsh<CR>
+" nnoremap <C-d> :!zsh<CR>
 
 " Git
 nnoremap <leader>gs :!clear && git s<CR>
