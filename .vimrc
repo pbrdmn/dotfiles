@@ -76,8 +76,8 @@ nnoremap <leader>gs :!clear && git s<CR>
 nnoremap <leader>gl :!clear && git l<CR>
 
 " Backup files path
-set backupdir=~/.vim/tmp//
-set directory=~/.vim/tmp//
+" set backupdir=~/.vim/tmp//
+" set directory=~/.vim/tmp//
 
 
 " Plugins
