@@ -58,6 +58,9 @@ nnoremap <leader>s :sfind *
 nnoremap <leader>F :find <C-R>=expand('%:h').'/*'<CR>
 nnoremap <leader>S :sfind <C-R>=expand('%:h').'/*'<CR>
 
+command! -nargs=1 JsFind vim "<args>" ./**/*.js
+nnoremap <leader>jf :JsFind 
+
 " File Browsing
 " let g:netrw_banner=0
 let g:netrw_liststyle=3 " tree view
