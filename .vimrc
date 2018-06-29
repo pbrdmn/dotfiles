@@ -65,11 +65,9 @@ nnoremap <leader>jf :JsFind
 " let g:netrw_banner=0
 let g:netrw_liststyle=3 " tree view
 
-" Modifying files
-nnoremap <leader>rm :call delete(@%) \| bd!<CR>
-
-" Quick terminal
-" nnoremap <C-d> :!zsh<CR>
+" Easy Cut/Copy
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR>
 
 " Git
 nnoremap <leader>gs :!clear && git s<CR>
