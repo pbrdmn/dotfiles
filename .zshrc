@@ -114,8 +114,8 @@ eval "$(hub alias -s)"
 . ~/AirService/airservice-hosts-aliases
 # /AirService Servers
 
-export PATH="/usr/local/opt/node@6/bin:$PATH"
-# export PATH="/usr/local/opt/node@8/bin:$PATH"
+# export PATH="/usr/local/opt/node@6/bin:$PATH"
+export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 # Setup rbenv
 eval "$(rbenv init -)"
