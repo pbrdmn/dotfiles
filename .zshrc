@@ -104,6 +104,7 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH"
 alias zoom='open "zoommtg://zoom.us/join?action=join&confid=dGlkPWUzOGQ0OTg4ODI4MjRiMjMzODIwYmZjZjM2ZDk0MGMz&confno=374652275&zc=0&pk=&mcv=0.92.11227.0929&browser=safari"'
 alias AS='~/AirService'
 alias zsh-reload='source ~/.zshrc'
+alias yt='cd ~/YouTube && youtube-dl '
 # /Aliases
 
 # Enable Github's hub extension of git
