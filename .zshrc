@@ -105,6 +105,7 @@ alias zoom='open "zoommtg://zoom.us/join?action=join&confid=dGlkPWUzOGQ0OTg4ODI4
 alias AS='~/AirService'
 alias zsh-reload='source ~/.zshrc'
 alias yt='cd ~/YouTube && youtube-dl '
+alias cat=bat
 # /Aliases
 
 # Enable Github's hub extension of git
