@@ -82,15 +82,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Load rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-# Load Android SDK
-export ANDROID_SDK_ROOT=/usr/local/share/android-sdk
-export ANDROID_HOME=/usr/local/share/android-sdk
-#export ADB_PATH="$ANDROID_HOME/platform-tools/adb"
-export PATH="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -101,27 +92,12 @@ export PATH="$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$PATH"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Aliases
-alias zoom='open "zoommtg://zoom.us/join?action=join&confid=dGlkPWUzOGQ0OTg4ODI4MjRiMjMzODIwYmZjZjM2ZDk0MGMz&confno=374652275&zc=0&pk=&mcv=0.92.11227.0929&browser=safari"'
-alias AS='~/AirService'
 alias zsh-reload='source ~/.zshrc'
-alias yt='cd ~/YouTube && youtube-dl '
-alias cat=bat
 # /Aliases
 
 # Enable Github's hub extension of git
 eval "$(hub alias -s)"
 # /Enable Github's hub extension of git
-
-# AirService Servers
-. ~/AirService/airservice-hosts-aliases
-# /AirService Servers
-
-# export PATH="/usr/local/opt/node@6/bin:$PATH"
-export PATH="/usr/local/opt/node@8/bin:$PATH"
-
-# Setup rbenv
-eval "$(rbenv init -)"
-# /Setup rbenv
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
