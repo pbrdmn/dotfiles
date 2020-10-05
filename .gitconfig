@@ -5,8 +5,13 @@
 [alias]
   a = add -p
   b = branch -a
+  bd = "!for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
+  bg = "!echo 'Branches gone from remote'; echo 'git bd to delete them'; for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do echo $branch; done"
+  bf = fetch -p
+  can = commit --amend --no-edit
   cb = checkout -b
   co = checkout
+  ds = diff --staged
   ri = rebase -i origin/master
   l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
   ll = log --stat --abbrev-commit
@@ -33,3 +38,5 @@
   show = diff-so-fancy | less --tabs=1,5 -RFX
 [core]
   excludesfile = ~/.gitignore
+[pull]
+	rebase = true
