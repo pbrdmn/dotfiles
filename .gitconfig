@@ -8,6 +8,7 @@
   bd = "!for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done"
   bg = "!echo 'Branches gone from remote'; echo 'git bd to delete them'; for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do echo $branch; done"
   bf = fetch -p
+  can = commit --amend --no-edit
   cb = checkout -b
   co = checkout
   ri = rebase -i origin/master
