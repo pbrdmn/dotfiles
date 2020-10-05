@@ -11,6 +11,7 @@
   can = commit --amend --no-edit
   cb = checkout -b
   co = checkout
+  ds = diff --staged
   ri = rebase -i origin/master
   l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
   ll = log --stat --abbrev-commit
