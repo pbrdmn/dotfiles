@@ -1,16 +1,23 @@
 export EDITOR='vim'
-export ZSH="/Users/philip/.oh-my-zsh"
-ZSH_THEME="theunraveler"
 
-plugins=(git brew osx zsh-syntax-highlighting)
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' \
+    '+l:|?=** r:|?=**'
 
-source $ZSH/oh-my-zsh.sh
+export PROMPT='%(?.%F{green}√.%F{red}?%?)%f %B%F{240}%1~%f%b %# '
+
+setopt prompt_subst
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+source ~/dotfiles/git-prompt.sh
+export RPROMPT=$'%F{magenta}$(__git_ps1 "%s")'
+
 
 # aliases
 alias zshc="vi ~/.zshrc && zshr"
 alias zshr="source ~/.zshrc"
-alias omzc="vi ~/.oh-my-zsh"
-alias omzr="source ~/.oh-my-zsh"
+alias la="ls -la"
 
 # git
 alias git=hub
@@ -38,8 +45,6 @@ alias entry="~/captains-log/entry.sh"
 alias dc="docker-compose"
 alias k="kubectl"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
-
-
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
