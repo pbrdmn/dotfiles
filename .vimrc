@@ -42,12 +42,12 @@ nnoremap <esc><esc> :noh<return><esc>
 
 " Buffer Settings and Shortcuts
 " http://flaviusim.com/blog/resizing-vim-window-splits-like-a-boss/
-set winheight=10
-set winminheight=3
-nnoremap <silent> + :exe "resize " . (winheigt(0) * 3/2)<CR>
-nnoremap <silent> - :exe "resize " . (winheigt(0) * 2/3)<CR>
+" set winheight=10
+" set winminheight=3
+" nnoremap <silent> + :exe "resize " . (winheigt(0) * 3/2)<CR>
+" nnoremap <silent> - :exe "resize " . (winheigt(0) * 2/3)<CR>
 
-nnoremap <leader>l :ls<CR>:b<space>
+" nnoremap <leader>l :ls<CR>:b<space>
 
 " Finding files
 " https://stackoverflow.com/questions/16082991/vim-switching-between-files-rapidly-using-vanilla-vim-no-plugins
