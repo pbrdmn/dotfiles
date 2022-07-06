@@ -80,17 +80,17 @@ nnoremap <leader>gl :!clear && git l<CR>
 
 " Plugins
 " Install with :PlugUpdate
-nnoremap <leader>rp :PlugUpdate
-call plug#begin('~/.vim/plugged')
+"nnoremap <leader>rp :PlugUpdate
+"call plug#begin('~/.vim/plugged')
 " vim-plug @ https://github.com/junegunn/vim-plug
 
 " vim-prettier @ https://github.com/prettier/vim-prettier
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Ctrl-P @ https://github.com/ctrlpvim/ctrlp.vim
 " AG for Vim @ https://github.com/rking/ag.vim
 " fugitive @ https://github.com/tpope/vim-fugitive
-call plug#end()
+"call plug#end()
 
 " Prettier Config
 let g:prettier#config#semi = 'false'
