@@ -33,7 +33,7 @@ set ruler
 set laststatus=2
 
 " Clear highlight on ESC
-nnoremap <esc> :noh<return><esc>
+nnoremap <esc><esc> :noh<return><esc>
 
 " Autoread - update buffers when files have changed
 " set autoread
