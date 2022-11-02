@@ -17,7 +17,7 @@ setopt prompt_subst
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-source ~/dotfiles/git-prompt.sh
+source ~/code/dotfiles/git-prompt.sh
 export RPROMPT=$'%F{magenta}$(__git_ps1 "%s")%k'
 
 # aliases
@@ -26,7 +26,7 @@ alias zshr="source ~/.zshrc"
 alias la="ls -la"
 
 # git aliases
-alias git=hub
+#alias git=hub
 alias ga="git add -p"
 alias gaa="git add ."
 alias gc="git commit -m"
