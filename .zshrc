@@ -17,7 +17,7 @@ setopt prompt_subst
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
-source ~/code/dotfiles/git-prompt.sh
+source ~/src/dotfiles/git-prompt.sh
 export RPROMPT=$'%F{magenta}$(__git_ps1 "%s")%k'
 
 # aliases
@@ -48,10 +48,6 @@ alias grim="git rebase -i origin/main"
 alias gs="git status"
 
 # misc aliases
-alias entry="~/captains-log/entry.sh"
-alias dc="docker-compose"
-alias k="kubectl"
-alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias py="python3"
 
 export NVM_DIR="$HOME/.nvm"
@@ -67,3 +63,9 @@ bindkey "^R" history-incremental-search-backward
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+alias python=/usr/bin/python3
+alias PYTHON=/usr/bin/python3
