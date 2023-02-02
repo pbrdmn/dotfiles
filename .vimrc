@@ -4,6 +4,8 @@ nnoremap <leader>r :so ~/.vimrc<CR>
 " basics
 " http://vim.wikia.com/wiki/Example_vimrc
 
+let mapleader=";"
+
 set nocompatible
 filetype indent plugin on
 syntax on
@@ -20,6 +22,7 @@ set visualbell
 set mouse=a
 set ttymouse=xterm2
 set cmdheight=2
+" setglobal spell spelllang=en_au
 
 set splitbelow
 set splitright
