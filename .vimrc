@@ -22,7 +22,7 @@ set visualbell
 set mouse=a
 set ttymouse=xterm2
 set cmdheight=2
-" setglobal spell spelllang=en_au
+setglobal spell spelllang=en_au
 
 set splitbelow
 set splitright
